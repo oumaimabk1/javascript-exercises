@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+
+const target = document.querySelector('#target');
+
+let html = '<table><tbody>';
+
+for (let i = 0; i < 10; i++) {
+  html += `<tr><td>${i}</td></tr>`;
+}
+
+html += '</tbody></table>';
+
+target.innerHTML = html;
 })();

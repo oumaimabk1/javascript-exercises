@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+    const button = document.getElementById('run');
+    const passwordInput1 = document.getElementById('pass-one');
+    const passwordInput2 = document.getElementById('pass-two');
+
+button.addEventListener('click', function() {
+  const isMatch = passwordInput1.value === passwordInput2.value;
+  if (!isMatch) {
+    passwordInput2.style.borderColor = 'red';
+    passwordInput1.style.borderColor = 'red';
+  }
+});
 })();

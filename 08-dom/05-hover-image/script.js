@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    const image = document.querySelector('img');
+    console.log(image.getAttribute('data-hover'));
+    const srcHover = image.getAttribute('data-hover');
+    const srcInitial = image.getAttribute('src');
+    image.addEventListener('mouseover',()=>{
+        image.src = srcHover;
+    })
+    image.addEventListener('mouseout', function() {
+        image.src = srcInitial;
+    });
 })();

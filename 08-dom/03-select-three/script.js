@@ -11,4 +11,9 @@
 
 (() => {
     // your code here
+    const targets = document.querySelectorAll('.target');
+    console.log(targets)
+    for (const target of targets) {
+   target.innerHTML = 'owned';
+ }
 })();

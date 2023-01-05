@@ -11,4 +11,13 @@
 
 (() => {
     // your code here
+    const passOne = document.getElementById("pass-one");
+
+  passOne.addEventListener("input", ({ target: { value } }) => {
+    const hasEightCharacters = value.length >= 8;
+    const hasTwoDigits = /\d/.test(value) && /\d/.test(value.replace(/\d/, ''));
+    if (hasEightCharacters && hasTwoDigits) {
+        alert('ok')
+      } 
+  });
 })();

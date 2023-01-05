@@ -10,13 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    const gallery = [
-        "../../_shared/img/bell.svg",
-        "../../_shared/img/clock.svg",
-        "../../_shared/img/compass.svg",
-        "../../_shared/img/lemon.svg",
-        "../../_shared/img/map.svg",
-    ];
+  const gallery = [
+    "../../_shared/img/bell.svg",
+    "../../_shared/img/clock.svg",
+    "../../_shared/img/compass.svg",
+    "../../_shared/img/lemon.svg",
+    "../../_shared/img/map.svg",
+  ];
 
-    // your code here
+  // your code here
+  const image = document.querySelector("img");
+  let currentImageIndex = 0;
+  document.getElementById("next").addEventListener("click", () => {
+    currentImageIndex = (currentImageIndex + 1) % gallery.length;
+    console.log(currentImageIndex)
+    image.src = gallery[currentImageIndex];
+  });
 })();

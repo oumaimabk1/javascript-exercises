@@ -11,4 +11,19 @@
 
 (() => {
     // your code here
+    const target = document.querySelector('#target');
+
+    let html = '<table><tbody>';
+    
+    for (let i = 1; i <= 10; i++) {
+      html += '<tr>';
+      for (let j = 1; j <= 10; j++) {
+        html += `<td>${i * j}</td>`;
+      }
+      html += '</tr>';
+    }
+    
+    html += '</tbody></table>';
+    
+    target.innerHTML = html;
 })();

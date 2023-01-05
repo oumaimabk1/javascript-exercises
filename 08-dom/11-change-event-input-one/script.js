@@ -10,5 +10,12 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  const passOne = document.getElementById("pass-one");
+
+  passOne.addEventListener("input", ({ target: { value } }) => {
+    if (value.length >= 10) {
+      passOne.value = value.substring(0, 10);
+    }
+  });
 })();
