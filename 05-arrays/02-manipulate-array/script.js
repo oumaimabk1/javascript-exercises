@@ -8,7 +8,17 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-
+function transformArray(fruits) {
+    // Enlevez le premier et le dernier élement du tableau
+    fruits.shift(); // Enlève le premier élement du tableau
+    fruits.pop(); // Enlève le dernier élement du tableau
+  
+    // Ajoutez un élément "banane" au début du tableau
+    fruits.unshift("banane");
+  
+    // Ajoutez un élément "kiwi" à la fin du tableau
+    fruits.push("kiwi");
+  }
 (() => {
     const fruits = [
         "pomme",
@@ -24,4 +34,9 @@
     ];
 
     // your code here
+    transformArray(fruits);
+    document.getElementById('run').addEventListener('click',()=>{
+        alert(fruits);
+    })
+
 })();

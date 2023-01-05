@@ -26,4 +26,11 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        if (fruits.indexOf("pomme") !== -1) {
+            console.log("Il y a une pomme dans le tableau");
+          } else {
+            console.log("Il n'y a pas de pomme dans le tableau");
+          }
+    })
 })();

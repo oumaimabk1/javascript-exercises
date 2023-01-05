@@ -39,4 +39,9 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        people.forEach((el,i) => {
+            console.log("la personne "+el.lastname+" est d'index "+i)
+        })
+    });
 })();

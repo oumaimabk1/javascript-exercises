@@ -10,18 +10,31 @@
 // You will have time to focus on it later.
 
 (() => {
-    const fruits = new Set([
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
-        "orange",
-        "mandarine",
-        "durian",
-        "pêche",
-        "raisin",
-        "cerise",
-    ]);
+  const fruits = new Set([
+    "pomme",
+    "poire",
+    "fraise",
+    "tomate",
+    "orange",
+    "mandarine",
+    "durian",
+    "pêche",
+    "raisin",
+    "cerise",
+  ]);
 
-    // your code here
+  // your code here
+  const button = document.getElementById("run");
+  button.addEventListener("click", () => {
+    // Enlève "pomme" et "cerise" du Set
+    fruits.delete("pomme");
+    fruits.delete("cerise");
+
+    // Ajoute "banane" et "kiwi" au Set
+    fruits.add("banane");
+    fruits.add("kiwi");
+
+    // Affiche le Set résultant dans la console
+    console.log(fruits);
+  });
 })();

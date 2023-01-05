@@ -26,4 +26,8 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        let elm = fruits[3]
+        alert(`le 4ème élément du tableau fruits est ${elm}`)
+    })
 })();

@@ -10,83 +10,95 @@
 // You will have time to focus on it later.
 
 (() => {
-    const people = [
-        {
-            firstname: "Dreddy",
-            lastname: "Nussgen",
-            age: 70,
-        },
-        {
-            firstname: "Yves",
-            lastname: "Sear",
-            age: 49,
-        },
-        {
-            firstname: "Marcel",
-            lastname: "Cowderay",
-            age: 59,
-        },
-        {
-            firstname: "Dag",
-            lastname: "Binnall",
-            age: 31,
-        },
-        {
-            firstname: "Horten",
-            lastname: "Claesens",
-            age: 75,
-        },
-        {
-            firstname: "Charmian",
-            lastname: "Harnes",
-            age: 10,
-        },
-        {
-            firstname: "Sean",
-            lastname: "Littlejohns",
-            age: 37,
-        },
-        {
-            firstname: "Hazlett",
-            lastname: "Sprouls",
-            age: 87,
-        },
-        {
-            firstname: "Marcel",
-            lastname: "Hasted",
-            age: 66,
-        },
-        {
-            firstname: "Cary",
-            lastname: "Summerson",
-            age: 15,
-        },
-        {
-            firstname: "Feodor",
-            lastname: "Ollett",
-            age: 56,
-        },
-        {
-            firstname: "Kelly",
-            lastname: "Ranahan",
-            age: 62,
-        },
-        {
-            firstname: "Madelene",
-            lastname: "Davie",
-            age: 14,
-        },
-        {
-            firstname: "Bent",
-            lastname: "Karpe",
-            age: 82,
-        },
-        {
-            firstname: "Reinaldo",
-            lastname: "Grimbleby",
-            age: 81,
-        },
-    ];
+  const people = [
+    {
+      firstname: "Dreddy",
+      lastname: "Nussgen",
+      age: 70,
+    },
+    {
+      firstname: "Yves",
+      lastname: "Sear",
+      age: 49,
+    },
+    {
+      firstname: "Marcel",
+      lastname: "Cowderay",
+      age: 59,
+    },
+    {
+      firstname: "Dag",
+      lastname: "Binnall",
+      age: 31,
+    },
+    {
+      firstname: "Horten",
+      lastname: "Claesens",
+      age: 75,
+    },
+    {
+      firstname: "Charmian",
+      lastname: "Harnes",
+      age: 10,
+    },
+    {
+      firstname: "Sean",
+      lastname: "Littlejohns",
+      age: 37,
+    },
+    {
+      firstname: "Hazlett",
+      lastname: "Sprouls",
+      age: 87,
+    },
+    {
+      firstname: "Marcel",
+      lastname: "Hasted",
+      age: 66,
+    },
+    {
+      firstname: "Cary",
+      lastname: "Summerson",
+      age: 15,
+    },
+    {
+      firstname: "Feodor",
+      lastname: "Ollett",
+      age: 56,
+    },
+    {
+      firstname: "Kelly",
+      lastname: "Ranahan",
+      age: 62,
+    },
+    {
+      firstname: "Madelene",
+      lastname: "Davie",
+      age: 14,
+    },
+    {
+      firstname: "Bent",
+      lastname: "Karpe",
+      age: 82,
+    },
+    {
+      firstname: "Reinaldo",
+      lastname: "Grimbleby",
+      age: 81,
+    },
+  ];
 
-    // your code here
+  // your code here
+  document.getElementById("run").addEventListener("click", () => {
+    // Utilisez la méthode Array.prototype.find() pour trouver l'objet de la personne dont le nom est "Dupont" et le prénom "Jean" dans le tableau "people"
+    const person = people.filter((p) => p.age > 18);
+    // Vérifiez si la personne a été trouvée
+    if (person) {
+      // Affichez le nouveau tableau dans la console
+      console.log(person);
+    } else {
+      // Si le tableau n'a pas été trouvée, affichez un message d'erreur dans la console
+      console.error("Person not found in array.");
+    }
+  });
 })();

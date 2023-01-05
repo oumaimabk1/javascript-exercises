@@ -10,17 +10,29 @@
 // You will have time to focus on it later.
 
 (() => {
-    const people = new Set([
-        "Nicolas",
-        "Anthony",
-        "Leny",
-        "Alexandre",
-        "Eric",
-        "Caroline",
-        "Esther",
-        "Simon",
-        "Lucas",
-    ]);
+  const people = new Set([
+    "Nicolas",
+    "Anthony",
+    "Leny",
+    "Alexandre",
+    "Eric",
+    "Caroline",
+    "Esther",
+    "Simon",
+    "Lucas",
+  ]);
 
-    // your code here
+  // your code here
+  const button = document.getElementById("run");
+  button.addEventListener("click", () => {
+    // Affiche le nombre de personnes dans le Set
+    console.log(`Il y a ${people.size} personnes dans le Set.`);
+
+    // Indique si Alexandre fait partie du Set
+    if (people.has("Alexandre")) {
+      console.log("Alexandre fait partie du Set.");
+    } else {
+      console.log("Alexandre ne fait pas partie du Set.");
+    }
+  });
 })();

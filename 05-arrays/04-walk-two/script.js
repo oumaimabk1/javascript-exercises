@@ -26,4 +26,9 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        fruits.forEach((el,i) => {
+            console.log("l'élément "+el+" est d'index "+i)
+        })
+    });
 })();
