@@ -8,7 +8,9 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-
+function completeComputerInfo(computer,defaultProps) {
+    return Object.assign({}, defaultProps, computer);
+  }
 (() => {
     const computers = [
         {id: "0001", available: false, user: "leny", os: "macOS"},
@@ -27,4 +29,9 @@
         user: null,
     };
     // your code here
+    
+    document.getElementById('run').addEventListener('click',()=>{
+        const updatedComputers = computers.map(computer => completeComputerInfo(computer,defaultProps));
+        console.log(updatedComputers)
+    })
 })();

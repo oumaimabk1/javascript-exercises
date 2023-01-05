@@ -51,6 +51,6 @@
     if (randomBird.fem) {
       article = "La";
     }
-    console.log(`${article} ${randomBird.name} ${randomAdjective}`);
+    document.getElementById('target').innerHTML = `${article} ${randomBird.name} ${randomAdjective}`;
   });
 })();
