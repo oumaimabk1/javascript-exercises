@@ -16,4 +16,30 @@
         }
     }
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        class Cat extends Animal {
+            static greeting = 'meow';
+
+            constructor(name) {
+                super(name);
+                this.name = name;
+            }
+          }
+          
+          class Dog extends Animal {
+            static greeting = 'woof';
+          
+            constructor(name) {
+              super(name);
+              this.name = name;
+            }
+          }
+        
+          const cat = new Cat('Fluffy');
+          const dog = new Dog('Buddy');
+        
+          console.log(cat.sayHello());
+          console.log(dog.sayHello());
+
+    })
 })();
