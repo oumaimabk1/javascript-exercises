@@ -11,4 +11,19 @@
 
 (() => {
     // your code here
+    const target = Math.floor(Math.random() * 100) + 1;  // Generate a random
+    let guess;
+    let numGuesses = 0;
+
+ do {
+  guess = prompt(`Enter a number between 1 and 100 ${target}`);
+  numGuesses++;
+  if (guess > target) {
+    alert("Your guess is too high. Try again.");
+  } else if (guess < target) {
+    alert("Your guess is too low. Try again.");
+  }
+} while (guess != target); 
+
+alert(`Congratulations! You guessed the number in ${numGuesses} tries.`);
 })();

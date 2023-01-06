@@ -11,4 +11,11 @@
 
 (() => {
     // your code here
+    var num = document.getElementById('target');
+    console.log(num);
+    var slide = document.getElementById('slider');
+    slide.addEventListener('change',()=>{
+        num.innerHTML = '+'+slide.value;
+    })
+  
 })();

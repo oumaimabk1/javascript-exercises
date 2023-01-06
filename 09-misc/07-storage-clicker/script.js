@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    const button = document.getElementById('increment')
+    const input = document.getElementById('target')
+    
+    button.addEventListener('click',()=>{
+        let compteur = window.localStorage.getItem('compteur') || 0;
+        console.log(compteur)
+        input.innerHTML =  +compteur + 1;
+        compteur++;
+        window.localStorage.setItem('compteur',compteur)
+    })
 })();

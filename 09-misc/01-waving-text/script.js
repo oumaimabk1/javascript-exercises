@@ -11,4 +11,11 @@
 
 (() => {
     // your code here
+    const text = "Texte avec effet vague";
+    const wave = document.getElementById("target");
+    let html = "";
+    for (let i = 0; i < 5; i++) {
+      html += `<span style="text-shadow: 0 ${i}px 0 #777">${text}</span>`;
+    }
+    wave.innerHTML = html;
 })();
