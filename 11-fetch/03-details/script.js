@@ -11,4 +11,21 @@
 
 (() => {
     // your code here
+    const button = document.getElementById('run');
+    const input = document.getElementById('hero-id');
+    button.addEventListener('click', () => {
+        const id = input.value;
+      fetch('http://localhost:3000/heroes/'+id)
+        .then(response => response.json())
+        .then(hero => {
+            console.log(hero)
+           
+                const template = document.querySelector('template');
+                const clone = template.content.cloneNode(true);
+                clone.querySelector('.name').textContent = hero.name;
+                clone.querySelector('.alter-ego').textContent = hero.alterEgo;
+                clone.querySelector('.powers').textContent = hero.abilities;
+                target.appendChild(clone);  
+        });
+    });
 })();

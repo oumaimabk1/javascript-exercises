@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  const button = document.getElementById("run");
+
+  button.addEventListener("click", () => {
+    const id = document.getElementById("hero-id").value;
+
+    fetch(`http://localhost:3000/heroes/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then(res => console.log(res));
+  });
 })();
