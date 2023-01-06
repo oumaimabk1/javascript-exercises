@@ -10,5 +10,25 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  // your code here
+  const button = document.getElementById("run");
+  button.addEventListener("click", () => {
+    window.lib.getPosts((error, posts) => {
+      if (error) {
+        console.error(error);
+      } else {
+        posts.forEach((el) => {
+          window.lib.getComments(el.id, (err, comments) => {
+            if (error) {
+              console.error(error);
+            } else {
+              el.comments = comments;
+            }
+          });
+        });
+        console.log(posts);
+      }
+    });
+  });
 })();

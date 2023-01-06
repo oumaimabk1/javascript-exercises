@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+    const button = document.getElementById("run");
+    button.addEventListener("click", () => {
+      window.lib.getPosts().then((posts) => {
+       posts.forEach(post => {
+        window.lib.getComments(post.id).then(comment=>{
+            post.comments = comment;
+        }) 
+        console.log(posts)
+       });
+      });
+    });
 })();

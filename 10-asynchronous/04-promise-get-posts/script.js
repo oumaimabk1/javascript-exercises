@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  const button = document.getElementById("run");
+  button.addEventListener("click", () => {
+    window.lib.getPosts().then(function (posts) {
+      console.log(posts);
+    });
+  });
 })();

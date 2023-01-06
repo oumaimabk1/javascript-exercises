@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+    const button = document.getElementById('run');
+    button.addEventListener('click',()=>{
+        window.lib.getPersons((error,persons)=>{
+            setTimeout(() => {
+                if (error) {
+                  console.error(error.message);
+                } else {
+                  console.log(persons);
+                }
+              }, 2000);
+        })
+    })
 })();

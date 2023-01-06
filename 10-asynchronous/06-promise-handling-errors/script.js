@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+    const button = document.getElementById("run");
+    button.addEventListener("click", () => {
+      window.lib.getPersons().then(function (posts) {
+        console.log(posts);
+      }).catch(err => console.error(err));
+    });
 })();
