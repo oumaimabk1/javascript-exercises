@@ -8,9 +8,9 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-function completeComputerInfo(computer,defaultProps) {
+const  completeComputerInfo = (computer,defaultProps) => {
     return Object.assign({}, defaultProps, computer);
-  }
+}
 (() => {
     const computers = [
         {id: "0001", available: false, user: "leny", os: "macOS"},
@@ -35,3 +35,5 @@ function completeComputerInfo(computer,defaultProps) {
         console.log(updatedComputers)
     })
 })();
+
+module.exports = completeComputerInfo;
